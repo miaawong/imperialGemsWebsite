@@ -33,7 +33,7 @@ const Layout = props => {
                 <Link to={`/about`}>About</Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
+                <Link to={`/schedule`}>Schedule</Link>
               </li>
             </ul>
           </nav>
@@ -45,29 +45,21 @@ const Layout = props => {
           <div className="site-head-right">
             <div className="social-links">
               <a
-                href="https://www.facebook.com"
+                href="http://imperialgems.herokuapp.com/"
+                title="newsletter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sign Up for Updates
+              </a>
+              <a
+                href="https://www.facebook.com/Imperial-Gems-305753362803182/"
                 title="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Facebook
               </a>
-              <a
-                href="https://twitter.com"
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSS
-              </Link>
             </div>
           </div>
         </div>

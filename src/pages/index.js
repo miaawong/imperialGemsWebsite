@@ -1,9 +1,10 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
+import showPic from "../utils/img/gems2.jpeg"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -18,17 +19,37 @@ const BlogIndex = ({ data }, location) => {
     <Layout title={siteTitle}>
       <SEO
         title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        keywords={[
+          `Imperial Gems`,
+          `beads`,
+          `gemstones`,
+          `gems`,
+          `jewelry`,
+          `pearls`,
+          `glass beads`,
+        ]}
       />
       {/* <Bio /> */}
-      {data.site.siteMetadata.description && (
-        <header className="page-head">
-          <h2 className="page-head-title">
-            {data.site.siteMetadata.description}
-          </h2>
-        </header>
-      )}
-      <div className="post-feed">
+      <section className="page-head">
+        {data.site.siteMetadata.description && (
+          <header className="page-head-left">
+            <h2 className="page-head-title">
+              {data.site.siteMetadata.description}
+            </h2>
+            <div className="page-head-btns">
+              <Link to={`/about`}>Gallery</Link>
+              <Link to={`/schedule`}>Schedule</Link>
+            </div>
+          </header>
+        )}
+
+        <div className="page-head-img">
+          <img src={showPic} alt="picture of our beatiful gems" />
+        </div>
+      </section>
+
+      {/* might be used for later */}
+      {/* <div className="post-feed">
         {posts.map(({ node }) => {
           postCounter++
           return (
@@ -40,7 +61,7 @@ const BlogIndex = ({ data }, location) => {
             />
           )
         })}
-      </div>
+      </div> */}
     </Layout>
   )
 }

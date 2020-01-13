@@ -1,7 +1,7 @@
 /* Buttons
 /* ---------------------------------------------------------- */
 
-input[type="submit"],
+/* input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
@@ -107,4 +107,4 @@ input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
         background-color: color(var(--color-primary) l(-10%));
-    }
+    } */
