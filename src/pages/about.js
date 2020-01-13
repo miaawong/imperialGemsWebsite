@@ -4,6 +4,12 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import combo from "../utils/img/combo.jpeg"
+import beads from "../utils/img/beads.jpeg"
+import jade from "../utils/img/jade.jpeg"
+import pearls from "../utils/img/pearls.jpeg"
+import showPic from "../utils/img/showPic.jpeg"
+import tourmaline from "../utils/img/tourmaline.jpeg"
 
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
@@ -13,44 +19,40 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-
-      <article className="post-content page-template no-image">
-        <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Clean, minimal, and deeply customisable. London is a theme made for
-            people who appreciate simple lines.
-          </h2>
-          <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.benchAccounting.childImageSharp.fluid}
-              className="kg-image"
-            />
-            <figcaption>Large imagery is at the heart of this theme</figcaption>
-          </figure>
-          <h3 id="dynamic-styles">Dynamic styles</h3>
-          <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
-          </p>
-          <p>
-            Both post and page templates are light and minimal, with all the
-            focus on the content while the design of the theme gets out of the
-            way. Beneath the hood, London enjoys the full power of the{" "}
-            <a href="https://docs.ghost.org/api/handlebars-themes/">
-              Ghost Handlebars Theme API
-            </a>{" "}
-            to provide limitless customisation options and dynamic styles.
-          </p>
-          <p>
-            Don't forget to check out the{" "}
-            <a href="https://docs.ghost.org/integrations/">
-              Ghost Integrations Directory
-            </a>{" "}
-            for more ways to integrate Ghost with your favourite services.
-          </p>
+      <SEO
+        title="About"
+        keywords={[
+          `Imperial Gems`,
+          `gems`,
+          `gemstones`,
+          `pearls`,
+          `beads`,
+          `jewelry`,
+        ]}
+      />
+      <section className="about">
+        <h2 className="about-title">Gallery</h2>
+        <div className="grid-container">
+          <div className="grid-items">
+            <img src={combo} alt="collection of our jewelry" />
+          </div>
+          <div className="grid-items">
+            <img src={showPic} alt="a show we recently did" />
+          </div>
+          <div className="grid-items">
+            <img src={beads} alt="beads" />
+          </div>
+          <div className="grid-items">
+            <img src={jade} alt="beads" />
+          </div>
+          <div className="grid-items">
+            <img src={pearls} alt="pearls" />
+          </div>
+          <div className="grid-items">
+            <img src={tourmaline} alt="tourmaline" />
+          </div>
         </div>
-      </article>
+      </section>
     </Layout>
   )
 }

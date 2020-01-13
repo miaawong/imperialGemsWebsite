@@ -4,7 +4,7 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
-import showPic from "../utils/img/gems2.jpeg"
+import showPic from "../utils/img/showPic.jpeg"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"

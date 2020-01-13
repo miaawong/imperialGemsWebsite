@@ -30,7 +30,7 @@ const Layout = props => {
                 <Link to={`/`}>Home</Link>
               </li>
               <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
+                <Link to={`/about`}>Gallery</Link>
               </li>
               <li className="nav-elements" role="menuitem">
                 <Link to={`/schedule`}>Schedule</Link>
@@ -69,7 +69,7 @@ const Layout = props => {
           {children}
         </div>
       </main>
-      <footer className="site-foot">
+      {/* <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
         Built with{" "}
         <a
@@ -79,7 +79,7 @@ const Layout = props => {
         >
           Gatsby
         </a>
-      </footer>
+      </footer> */}
     </div>
   )
 }
