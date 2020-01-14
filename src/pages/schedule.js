@@ -13,13 +13,9 @@ const getSchedule = graphql`
     schedule: allContentfulSchedule {
       edges {
         node {
-          id
-          showName
-          date
-          dateshours {
+          schedule {
             json
           }
-          address
         }
       }
     }
@@ -40,11 +36,7 @@ const SchedulePage = ({ data }, location) => {
           return (
             <>
               <div id={show.node.id} className="shows">
-                <h3>{show.node.date}</h3>
-                <h3>{show.node.showName}</h3>
-
-                <h3> {show.node.address} </h3>
-                <RichTextToReact document={show.node.dateshours.json} />
+                <RichTextToReact document={show.node.schedule.json} />
               </div>
 
               <hr></hr>
@@ -68,8 +60,6 @@ export default props => (
   <StaticQuery
     query={getSchedule}
     render={data => {
-      const { id, showName, address, date, dateshours } = data
-      console.log(data)
       return <SchedulePage data={data} {...props} />
     }}
   />
