@@ -1,6 +1,9 @@
 const urljoin = require("url-join")
 const siteConfig = require("./siteConfig")
 
+require("dotenv").config({
+  path: `.env`,
+})
 module.exports = {
   siteMetadata: {
     title: siteConfig.name,
@@ -98,5 +101,12 @@ module.exports = {
     `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }
